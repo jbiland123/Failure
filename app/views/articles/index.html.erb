@@ -1,0 +1,8 @@
+<h1>Failure</h1>
+
+<% if user_signed_in? %> <!-- Dies wird nur angezeigt, wenn ein Benutzer angemeldet ist -->
+  <p>Willkommen, <%= current_user.email %>! <%= button_to("Log Out", destroy_user_session_path, method: :delete) %></p>
+<% else %>   <!-- Dies wird nur angezeigt, wenn kein Benutzer angemeldet ist -->
+  <p>Bitte melde dich an oder registriere dich.</p> <%= button_to("Anmelden", new_user_session_path) %></p>
+<% end %>
+
