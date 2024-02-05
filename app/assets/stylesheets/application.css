@@ -1,25 +1,12 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- body {
+body {
     margin: 0;
     padding-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
- }
+}
 
- ul {
+
+/*Navbar:*/
+ul {
     list-style-type: none;
     position: fixed;
     margin: 0;
@@ -28,32 +15,84 @@
     border-bottom: 1px solid #ff0000;
     width: 100%;
     display: flex;
-  }
-  
-  li a {
+    align-items: center;
+    justify-content: space-between; /* Platz zwischen den Elementen verteilen */
+}
+
+li p {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+li a {
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
     text-decoration: none;
     padding: 25px;
     font-size: 18px;
-  }
+}
 
-  li p {
-    float: left;
-    font-size: 22px;
-  }
+li img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-  li img {
-    float: right;
-    width: 30%;
+li a:hover {
+    background-color: #c9c9c9;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.navbar-spacing {
+    display: flex;
+    align-items: center;
+}
+
+/* Burgermenu-Styling */
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
   }
   
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #c9c9c9;
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
   }
+  
+  /* Hide the bars by default */
+  .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  /* Navbar-Styles */
+  /* ... (dein bestehender Code bleibt unverändert) */
+  
 
-  .active {
-    background-color: #04AA6D;
-  }
+/*Footer:*/
+.footer {
+    border-top: 1px solid #ff0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.footer img {
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 350px;
+    float: right;
+}

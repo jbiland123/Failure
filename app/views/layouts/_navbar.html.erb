@@ -1,8 +1,17 @@
 <ul>
     <li><p>FailureV8</p></li>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
-    <li><img class="srf-image" src="<%= asset_path("cantonbl.png") %>"></li>
+    <div class="navbar-spacing">
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">News</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+  </div>
+    <div class="navbar-spacing">
+        <% if user_signed_in? %> <!-- Dies wird nur angezeigt, wenn ein Benutzer angemeldet ist -->
+            <%= button_to("Abmelden", destroy_user_session_path, method: :delete) %>
+        <% else %>   <!-- Dies wird nur angezeigt, wenn kein Benutzer angemeldet ist -->
+            <%= button_to("Anmelden", new_user_session_path) %>
+        <% end %>
+        <li><img src="<%= asset_path("profileIcon.png") %>"></li>
+    </div>
 </ul>
