@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 # User Management gem
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem "devise_ldap_authenticatable"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -1,17 +1,18 @@
 <ul>
-    <li><p>FailureV8</p></li>
+    <a href="<%root_path%>"><img class="logo" src="<%= asset_path("cantonBlLogo.svg") %>"></a>
     <div class="navbar-spacing">
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="news.asp">News</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
+        <li><a href="#">Kanban</a></li>
+        <li><a href="#">Feedbackapp</a></li>
+        <li><a href="#">Rotationsplaner</a></li>
+        <li><a href="#">Wochenberichtsapp</a></li>
+        <li><a href="#">Bewerbungsapp</a></li>
   </div>
     <div class="navbar-spacing">
         <% if user_signed_in? %> <!-- Dies wird nur angezeigt, wenn ein Benutzer angemeldet ist -->
-            <%= button_to("Abmelden", destroy_user_session_path, method: :delete) %>
+            <%= button_to("Abmelden", destroy_user_session_path, method: :delete, class: 'button button1') %>
         <% else %>   <!-- Dies wird nur angezeigt, wenn kein Benutzer angemeldet ist -->
-            <%= button_to("Anmelden", new_user_session_path) %>
+            <%= button_to("Anmelden", new_user_session_path, class: 'button button2') %>
         <% end %>
-        <li><img src="<%= asset_path("profileIcon.png") %>"></li>
+        <a href="#"><img class="profile-icon" src="<%= asset_path("profileIcon.png") %>"></a>
     </div>
 </ul>
